@@ -1,6 +1,6 @@
 export class ChatService {
     getPerformanceReview(competitionsData) {
-        return fetch(import.meta.env.VITE_CHAT_BASE_URL + '/chat/review', {
+        return fetch(import.meta.env.VITE_BASE_URL + '/llm/review', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -14,7 +14,7 @@ export class ChatService {
     }
 
     getQuestionAnswered(competitionsData, message) {
-        return fetch(import.meta.env.VITE_CHAT_BASE_URL + '/chat/ask', {
+        return fetch(import.meta.env.VITE_BASE_URL + '/llm/ask', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
